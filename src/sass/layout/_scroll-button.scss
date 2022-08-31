@@ -1,0 +1,50 @@
+.scroll__button {
+  position: fixed;
+
+  bottom: 15%;
+  right: 10%;
+
+  visibility: hidden;
+  opacity: 0;
+
+  font-size: 30px;
+  line-height: 20px;
+
+  border-radius: 50%;
+  transform: rotate(-180deg);
+
+  @include tab {
+    right: 5%;
+  }
+}
+
+.scroll__icon {
+  width: 30px;
+  height: 30px;
+
+  fill: var(--secondary-accent-color);
+
+  &:hover {
+    fill: green;
+    transform: scale(1.1);
+  }
+
+  @include tab {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include desk {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.scroll-visible {
+  visibility: visible;
+  opacity: 1;
+
+  animation-name: animation-btn;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}

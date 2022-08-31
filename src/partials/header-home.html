@@ -1,0 +1,85 @@
+<header class="container header-home">
+  <div class="header-home__container">
+    <div class="header-home-btn__container">
+      <p id="displayEmail" class="login-element"></p>
+      <button class="login-element header-home-login__btn" id="signInBtn" type="button">
+        Sign In
+      </button>
+      <button class="login-element header-home-login__btn" id="logInBtn" type="button">
+        Log In
+      </button>
+      <button
+        class="login-element header-home-login__btn visually-hidden"
+        id="logOutBtn"
+        type="button"
+      >
+        Log Out
+      </button>
+    </div>
+
+    <nav class="nav-home">
+      <div class="nav-home__container">
+        <a class="nav-home__link" href="/src/index.html">
+          <svg class="nav-home__svg" width="24" heigth="24">
+            <use href="/src/images/icons.svg#film"></use>
+          </svg>
+          <span class="nav-home-logo__link nav-home-logo__link--append"
+            >Filmoteka</span
+          >
+        </a>
+      </div>
+
+      <ul class="nav-home__list">
+        <li>
+          <a
+            class="nav-home__link nav-home__link--overlay"
+            href="/src/index.html"
+            >Home</a
+          >
+        </li>
+        <li id="nav-library" class="visually-hidden">
+          <a
+            class="nav-home__link nav-home__link--append"
+            href="/src/my-library.html"
+            >My library</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-home-input__container">
+      <form class="header-form">
+        <input
+          class="header-home__input"
+          type="text"
+          name="searchMovie"
+          id=""
+          placeholder="Movie search"
+        />
+
+        <div class="header-home-svg__container">
+          <button class="header-home-svg__btn">
+            <svg class="header-home__svg" width="12" heigth="12">
+              <use href="/src/images/icons.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- при появлении текста/кнопок лог уменьшить падинги -->
+    <div class="header-home-message__container">
+      <p
+        id="message"
+        class="header-home__message header-home__message--append visually-hidden"
+      >
+        Search result not successful. Enter the correct movie name.
+      </p>
+    </div>
+    <div class="toggle">
+      <div class="toggle-icon">
+        <div id="svg-animation"></div>
+      </div>
+    </div>
+  </div>
+</header>

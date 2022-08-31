@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My library</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="shortcut icon" href="./images/film.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="container header-library">
+      <div class="header-library__container">
+        <div class="header-home-btn__container">
+          <p id="displayEmail" class="login-element"></p>
+          <button class="login-element header-home-login__btn" id="signInBtn" type="button">
+            Sign In
+          </button>
+          <button class="login-element header-home-login__btn" id="logInBtn" type="button">
+            Log In
+          </button>
+          <button
+            class="login-element header-home-login__btn visually-hidden"
+            id="logOutBtn"
+            type="button"
+          >
+            Log Out
+          </button>
+        </div>
+
+        <nav class="nav-home">
+          <div class="nav-home__container">
+            <a class="nav-home__link" href="index.html">
+              <svg class="nav-home__svg" width="24" heigth="24">
+                <use href="./images/icons.svg#film"></use>
+              </svg>
+              <span class="nav-home-logo__link nav-home-logo__link--append"
+                >Filmoteka</span
+              >
+            </a>
+          </div>
+
+          <div>
+            <ul class="nav-home__list">
+              <li>
+                <a class="nav-home__link" href="index.html">Home</a>
+              </li>
+              <li
+                id="nav-library"
+                class="nav-home__link--append visually-hidden"
+              >
+                <a
+                  class="nav-home__link nav-home__link--overlay"
+                  href="my-library.html"
+                  >My library</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="header-library-btn__container">
+          <button
+            class="header-library__btn header-library__btn--accent-color watched"
+          >
+            Watched
+          </button>
+          <button
+            class="header-library__btn header-library__btn--outline queue"
+          >
+            Queue
+          </button>
+          <div class="toggle">
+            <div class="toggle-icon">
+              <div id="svg-animation"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container main">
+      <div class="gallery library"></div>
+      <!-- <div class="gallery"></div> -->
+      <ul class="pagination js-pagination-block"></ul>
+    </main>
+    <include src="./partials/scroll-button.html"></include>
+    <!-- <include src="./partials/loader.html"></include> -->
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/teamModal.html"></include>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.3/lottie.min.js"
+      integrity="sha512-e0f5QhAghpnR7F96ocZHSXHNrM1ugw32mmQJsKg02ADeVj7uxFkG5UA+HgrcTTxcPWp415lH+1l1b4nZtyqnsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/scroll-button.js" type="module"></script>
+    <script src="./js/authApp.js" type="module"></script>
+    <script src="./js/teamModal.js" type="module"></script>
+    <script src="./js/my-library.js" type="module"></script>
+  </body>
+</html>
