@@ -1,2 +1,0 @@
-# Filmoteka
- JS Team Project
